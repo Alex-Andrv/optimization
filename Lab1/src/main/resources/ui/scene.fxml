@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.FXMLController">
+    <children>
+        <LineChart fx:id="chart" createSymbols="false" legendVisible="false" prefHeight="600" prefWidth="800">
+            <xAxis>
+                <NumberAxis autoRanging="false" lowerBound="-12.0" side="BOTTOM" tickUnit="0.5" upperBound="12.0" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" lowerBound="-12.0" side="LEFT" upperBound="12.0" />
+            </yAxis>
+        </LineChart>
+        <VBox alignment="CENTER" spacing="20.0">
+            <children>
+                <ChoiceBox fx:id="selectedMethodBox" value="Dichotomy method">
+                    <String fx:value="Dichotomy method" />
+                    <String fx:value="Fibonacci method" />
+                    <String fx:value="Golden ratio method" />
+                    <String fx:value="Successive parabolic method" />
+                    <String fx:value="Brent method" />
+                </ChoiceBox>
+                <ChoiceBox fx:id="selectedTestBox" value="Test 7">
+                    <String fx:value="Test 7" />
+                    <String fx:value="Test 8" />
+                    <String fx:value="Test 9" />
+                    <String fx:value="Test 10" />
+                </ChoiceBox>
+                <Button mnemonicParsing="false" onAction="#buttonClicked" text="Visualize" />
+            <Label fx:id="statisticsLabel" text="Label" />
+            </children>
+        </VBox>
+    </children>
+</HBox>
